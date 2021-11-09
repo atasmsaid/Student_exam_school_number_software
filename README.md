@@ -1,2 +1,2 @@
-# Soru_1
- Çok basit öğrenci numara ve sınav sorgulama yazılımı.
+# Student_exam_no_software
+Very simple student number and query software.

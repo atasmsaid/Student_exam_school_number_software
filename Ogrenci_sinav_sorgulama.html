@@ -2,47 +2,59 @@
 <body>
     <script>
 
-        var numara = prompt("Lütfen 5 haneli numaranızı giriniz");
-            if ((numara != "") && (numara != null) && (numara.length==5)) {
-                alert(numara + " numaralı öğrenci sisteme hoş geldiniz !");
-                document.writeln("<h3> Numaranız: "+ numara+"<h3>");
-            }
-            else if ((numara == "")||(numara.length!=5)) {
-                alert("Hata!!! Numaranızı tekrar kontrol edin, numaranızın uzunluğu 5'ten kısa veya az olamaz! Bir başka hata ise numara kısmı boş bırakılamaz.");
-            } else if (numara == null) {
-                alert("Sistemden çıkış yapıyorsunuz...");
-            }
-
-        var vize = prompt("Lütfen geçerli vize notunuzu giriniz");
-            if ((vize != "") && (vize != null)&& ((vize.length==3)||(vize.length==2)||(vize.length==1))) {
-                document.writeln("<h3> Vize notunuz: "+ vize+"<h3>");
-            }
-            else if ((vize == "")||(vize.length>=3)||(vize.length<=3)) {
-                alert("Hata!!! Vize notunuz en fazla 3 haneli sayı olabilir. Bir başka hata ise vize kısmı boş bırakılamaz.");
-            } else if (vize == null) {
-                alert("Sistemden çıkış yapıyorsunuz...");
-            }
-
-        var final = prompt("Lütfen final notunuzu giriniz");
-            if ((final != "") && (final != null)&&((final.length==3)||(final.length==2)||(final.length==1))) {
-                document.writeln("<h3> Final notunuz: "+ final+"<h3>");
-            }
-            else if ((final == "")||(final.length>=3)||(final.length<=3)) {
-                alert("Hata!!! Final notunuz en fazla 3 haneli sayı olabilir. Bir başka hata ise final kısmı boş bırakılamaz.");
-            } else if (final == null) {
-                alert("Sistemden çıkış yapıyorsunuz...");
-            }
+        for (; ;) {
+            var numara = prompt("Lütfen 5 haneli numaranızı giriniz");
+                if ((numara != "") && (numara != null) && (numara.length==5)) {
+                    alert(numara + " numaralı öğrenci sisteme hoş geldiniz !");
+                    document.writeln("<h3> Numaranız: "+ numara+"<h3>");
+                        break;
+                }
+                else if ((numara == "")||(numara.length!=5)) {
+                    alert("Hata!!! Numaranızı tekrar kontrol edin, numaranızın uzunluğu 5'ten kısa veya az olamaz! Bir başka hata ise numara kısmı boş bırakılamaz.");                
+                    
+                } else if (numara == null) {
+                    alert("Sistemden çıkış yapıyorsunuz...");
+                    
+                }            
+        }
+        
+        for (; ;) {        
+            var vize = prompt("Lütfen geçerli vize notunuzu giriniz");
+                if ((vize != "") && (vize != null)&& ((vize<=100)&&(vize>=0))) {
+                    document.writeln("<h3> Vize notunuz: "+ vize+"<h3>");
+                    break;
+                }
+                else if (vize == "") {
+                    alert("Hata!!! Vize notunuz en fazla 100 en az 0 olabilir. Bir başka hata ise vize kısmı boş bırakılamaz.");
+                    
+                } else if (vize == null) {
+                    alert("Sistemden çıkış yapıyorsunuz...");                    
+                }
+        }    
+        
+        for (; ;) {
+            var final = prompt("Lütfen final notunuzu giriniz");
+                if ((final != "") && (final != null)&&((final<=100)&&(final>=0))) {
+                    document.writeln("<h3> Final notunuz: "+ final+"<h3>");
+                    break;
+                }
+                else if (final == "") {
+                    alert("Hata!!! Final notunuz en fazla en fazla 100 en az 0 olabilir. Bir başka hata ise final kısmı boş bırakılamaz.");
+                } else if (final == null) {
+                    alert("Sistemden çıkış yapıyorsunuz...");
+                }
+        }    
 
         var n_vize=vize*40/100;
         var n_final=final*60/100;
         var ort=n_vize+n_final;
             if (ort>=55) {
                 document.writeln("<h3> Ortalama: "+ ort+"<h3>");
-                document.writeln("<h3> Tebrikler geçtiniz. <h3>");
+                document.writeln("<h3> Tebrikler dersi geçtiniz. <h3>");
             } else {
                 document.writeln("<h3> Ortalama: "+ ort+"<h3>");
                 document.writeln("<h3> Ortalamanız 55'ten düşük olduğu için bu dersi tekrar almalısınız. <h3>");
-            }
+            }        
 
     </script>
 </body>

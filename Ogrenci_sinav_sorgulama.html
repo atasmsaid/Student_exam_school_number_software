@@ -1,0 +1,23 @@
+<html>
+<body>
+    <script>
+        var numara = prompt("Lütfen numaranızı giriniz");
+        if ((numara != "") && (numara != null) && (numara.length==11)) {
+            alert(numara + " numaralı öğrenci sisteme hoş geldiniz !");
+        }
+        else if ((numara == "")||(numara.length!=11)) {
+            alert("Numaranızı tekrar kontrol edin, numaranızın uzunluğu 11'den kısa veya az olamaz! Bir başka hata ise numara kısmı boş bırakılamaz.");
+        } else if (numara == null) {
+            alert("Sistemden çıkış yapıyorsunuz...");
+        }
+        /*var vize = prompt("Lütfen vize notunuzu giriniz");
+        if (vize != "" || vize != null) {
+            alert(numara + " numaralı öğrenci sisteme hoş geldiniz !");
+        }
+        var final = prompt("Lütfen final notunuzu giriniz");
+        if (numara != "" || numara != null) {
+            alert(numara + " numaralı öğrenci sisteme hoş geldiniz !");
+        }*/
+    </script>
+</body>
+</html>
